@@ -4,9 +4,30 @@ The purpose of this article is to demonstrate how simple it is to set up and use
 
 This Auth0 Quickstart was modified to use passwordless Email and passwordless sms to login. Please make sure both connections are activated for your auth0 application when starting this application.
 
-The connection parameter is added to the authorize call when sending the user to Universal Login.
-For sms passwordless the connection paramater sms is added.
-For email passwordless the connection paramater email is added.
+The connection parameter is added to the authorize call when sending the user to Universal Login in the `app.js` file.
+
+```javascript
+const options = {
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+        connection: "email"
+      }
+    };
+```
+
+Using email as connection parameter will enforce passwordless email.
+
+```javascript
+const options = {
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+        connection: "sms"
+      }
+    };
+```
+
+Using email as connection parameter will enforce passwordless sms.
+
 
 ## Running the Sample Application
 
