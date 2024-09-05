@@ -8,22 +8,22 @@ The connection parameter is added to the authorize call when sending the user to
 
 ```javascript
 const options = {
-      authorizationParams: {
-        redirect_uri: window.location.origin,
-        connection: "email"
-      }
-    };
+  authorizationParams: {
+    redirect_uri: window.location.origin,
+    connection: "email"
+  }
+};
 ```
 
 Using email as connection parameter will enforce passwordless email.
 
 ```javascript
 const options = {
-      authorizationParams: {
-        redirect_uri: window.location.origin,
-        connection: "sms"
-      }
-    };
+  authorizationParams: {
+    redirect_uri: window.location.origin,
+    connection: "sms"
+  }
+};
 ```
 
 Using email as connection parameter will enforce passwordless sms.
